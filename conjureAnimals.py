@@ -18,10 +18,7 @@ class ConjureAnimalsGenerator:
                 raise ValueError
         except Exception as e:
             raise ValueError('The value passed to a ConjureAnimalsGenerator call must be a number or fractional string >= 0')
-        result = str()
-        for key, value in self.generateAnimals(challengeRating).items():
-            result += str(key).lstrip().rstrip() + ': ' + str(value) + '\n'
-        return result
+        return self._generateOutput(challengeRating)
     
     def _readInFromFile(self, fileName):
         readFile = open(fileName, 'r')
@@ -33,7 +30,7 @@ class ConjureAnimalsGenerator:
                 self.animalsByCR[currentCR] += line.split(',')
         readFile.close()
 
-    def generateAnimals(self, challengeRating):
+    def _generateAnimals(self, challengeRating):
         if challengeRating > 0:
             numAnimals = min(2 // challengeRating, 8)
         else:
@@ -44,3 +41,9 @@ class ConjureAnimalsGenerator:
         for i in range(numAnimals):
             results[animals[randint(0, len(animals) - 1)]] += 1
         return results
+
+    def _generateOutput(self, challengeRating):
+        result = str()
+        for key, value in self._generateAnimals(challengeRating).items():
+            result += str(key).lstrip().rstrip() + ': ' + str(value) + '\n'
+        return result
