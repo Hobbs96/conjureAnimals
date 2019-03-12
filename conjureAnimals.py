@@ -12,6 +12,12 @@ class ConjureAnimalsGenerator:
         pass
 
     def __call__(self, challengeRating):
+        try:
+            challengeRating = Fraction(challengeRating)
+            if challengeRating < 0:
+                raise ValueError
+        except Exception as e:
+            raise ValueError('The value passed to a ConjureAnimalsGenerator call must be a number or fractional string >= 0')
         result = str()
         for key, value in self.generateAnimals(challengeRating).items():
             result += str(key).lstrip().rstrip() + ': ' + str(value) + '\n'
