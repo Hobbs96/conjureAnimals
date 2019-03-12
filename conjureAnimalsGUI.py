@@ -36,7 +36,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         fileMenu = wx.Menu()
         # The "\t..." syntax defines an accelerator key that also triggers
         # the same event
-        helloItem = fileMenu.Append(-1, "&Hello...\tCtrl-H", 
+        loadFileItem = fileMenu.Append(-1, "&Load File...\tCtrl-L", 
                 "Help string shown in status bar for this menu item")
         fileMenu.AppendSeparator()
         # When using a stock ID we don't need to specify the menu item's
@@ -66,13 +66,14 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
 
 
     def OnExit(self, event):
-        """Close the frame, terminating the application."""
         self.Close(True)
 
+    def onLoadFile(self, event):
+        #TODO implement the functionality to load a file and instantiate the conjuration generator
+        pass
 
 
     def OnAbout(self, event):
-        """Display an About Dialog"""
         wx.MessageBox("This is a wxPython GUI for the Conjure Animals spell in D&D 5e." +
                       "\nSee Hobbs96 on github for more.", 
                       "About Conjure Animals",
