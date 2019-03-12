@@ -5,20 +5,17 @@ Hello World, but with more meat.
 
 import wx
 
-class HelloFrame(wx.Frame):
-    """
-    A Frame that says Hello World
-    """
+class ConjureAnimalsGeneratorFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
         # ensure the parent's __init__ is called
-        super(HelloFrame, self).__init__(*args, **kw)
+        super(ConjureAnimalsGeneratorFrame, self).__init__(*args, **kw)
 
         # create a panel in the frame
         pnl = wx.Panel(self)
 
         # and put some text with a larger bold font on it
-        st = wx.StaticText(pnl, label="Hello World!", pos=(25,25))
+        st = wx.StaticText(pnl, label="Conjure Animals v1.0", pos=(7,7))
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
@@ -26,10 +23,6 @@ class HelloFrame(wx.Frame):
 
         # create a menu bar
         self.makeMenuBar()
-
-        # and a status bar
-        self.CreateStatusBar()
-        self.SetStatusText("Welcome to wxPython!")
 
 
     def makeMenuBar(self):
@@ -68,7 +61,6 @@ class HelloFrame(wx.Frame):
         # Finally, associate a handler function with the EVT_MENU event for
         # each of the menu items. That means that when that menu item is
         # activated then the associated handler function will be called.
-        self.Bind(wx.EVT_MENU, self.OnHello, helloItem)
         self.Bind(wx.EVT_MENU, self.OnExit,  exitItem)
         self.Bind(wx.EVT_MENU, self.OnAbout, aboutItem)
 
@@ -78,15 +70,12 @@ class HelloFrame(wx.Frame):
         self.Close(True)
 
 
-    def OnHello(self, event):
-        """Say hello to the user."""
-        wx.MessageBox("Hello again from wxPython")
-
 
     def OnAbout(self, event):
         """Display an About Dialog"""
-        wx.MessageBox("This is a wxPython Hello World sample", 
-                      "About Hello World 2",
+        wx.MessageBox("This is a wxPython GUI for the Conjure Animals spell in D&D 5e." +
+                      "\nSee Hobbs96 on github for more.", 
+                      "About Conjure Animals",
                       wx.OK|wx.ICON_INFORMATION)
 
 
@@ -94,6 +83,6 @@ if __name__ == '__main__':
     # When this module is run (not imported) then create the app, the
     # frame, show it, and start the event loop.
     app = wx.App()
-    frm = HelloFrame(None, title='Hello World 2')
+    frm = ConjureAnimalsGeneratorFrame(None, title='Conjure Animals')
     frm.Show()
     app.MainLoop()
