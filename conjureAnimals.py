@@ -1,40 +1,55 @@
 from collections import defaultdict
 from random import randint
 from fractions import Fraction
+import json
+import os
 
 class ConjureAnimalsGenerator:
     def __init__(self, fileName):
         self.animalsByCR = defaultdict(list)
         self._readInFromFile(fileName)
+        self.challengeRating = 0
     
     def __repr__(self):
         pass
 
     def __call__(self, challengeRating):
-        try:
-            challengeRating = Fraction(challengeRating)
-            if challengeRating < 0:
-                raise ValueError
-        except Exception as e:
-            raise ValueError('The value passed to a ConjureAnimalsGenerator call must be a number or fractional string >= 0')
+        if challengeRating < 0:
+            raise ValueError('Challenge rating given to the ConjureAnimalsGenerator call must be > 0')
         self.challengeRating = challengeRating
         return self._generateAnimals()
     
     def _readInFromFile(self, fileName):
-        readFile = open(fileName, 'r')
-        currentCR = 0
-        for line in readFile:
-            if line[0].isdigit():
-                currentCR = Fraction(line)
-            else:
-                self.animalsByCR[currentCR] += line.split(',')
-        readFile.close()
+        fileName, fileExtension = os.path.splitext(fileName)
+        if (fileExtension == '.txt'):
+            self._readFromTxtFile(fileName)
+        elif (fileExtension == '.json'):
+            self._readFromJSONFile(fileName)
+        else:
+            raise ValueError('The file type passed to the ConjureAnimalsGenerator must be ".txt" or ".json"')
+
+    def _readFromTxtFile(self, fileName):
+        with open(fileName + '.txt') as file:
+            currentCR = 0
+            for line in file:
+                if line[0].isdigit():
+                    currentCR = Fraction(line)
+                else:
+                    self.animalsByCR[currentCR] += line.split(',')
+
+    def _readFromJSONFile(self, fileName):
+        # seems that this opens up to a lot of errors... what if the JSON passed in is poorly formatted?
+        with open(fileName + '.json') as file:
+            self.animalsByCR = json.load(file)
+        for key, value in self.animalsByCR.items():
+            self.animalsByCR[float(key)] = self.animalsByCR.pop(key)
 
     def _generateAnimals(self):
         if self.challengeRating > 0:
             numAnimals = min(2 // self.challengeRating, 8)
         else:
             numAnimals = 8
+        numAnimals = int(numAnimals)
 
         animals = self._getAnimalSequence()
         animalCounts = defaultdict(int)

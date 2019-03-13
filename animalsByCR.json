@@ -1,0 +1,36 @@
+{
+    "0":
+    [
+        "Frog", "Sea Horse", "Baboon", "Badger", "Bat", "Cat", "Crab", "Deer", "Eagle",
+        "Giant Fire Beetle", "Goat", "Hawk", "Hyena", "Jackal", "Lizard", "Octopus",
+        "Owl", "Quipper", "Rat", "Raven", "Scorpion", "Spider", "Vulture", "Weasel"
+    ],
+    "0.125":
+    [
+        "Blood Hawk", "Camel", "Flying Snake", "Giant Crab", "Giant Rat",
+        "Giant Weasel", "Mastiff", "Mule", "Poisonous Snake", "Pony", "Stirge"
+    ],
+    "0.25":
+    [
+        "Axe Beak", "Boar", "Constrictor Snake", "Draft Horse", "Elk", "Giant Badger",
+        "Giant Bat", "Giant Centipede", "Giant Frog", "Giant Lizard", "Giant Owl",
+        "Giant Poisonous Snake", "Giant Wolf Spider", "Panther", "Riding Horse",
+        "Swarm of Bats", "Swarm of Rats", "Swarm of Ravens", "Wolf"
+    ],
+    "0.5":
+    [
+        "Ape", "Black Bear", "Crocodile", "Giant Goat", "Giant Sea Horse", "Giant Wasp",
+        "Reef Shark", "Swarm of Insects", "Warhorse"
+    ],
+    "1":
+    [
+        "Brown Bear", "Dire Wolf", "Giant Eagle", "Giant Hyena", "Giant Octopus",
+        "Giant Spider", "Giant Toad", "Giant Vulture", "Lion", "Swarm of Quippers", "Tiger"
+
+    ],
+    "2":
+    [
+        "Giant Boar", "Giant Constrictor Snake", "Giant Elk", "Hunter Shark", "Plesiosaurus",
+        "Polar Bear", "Rhinoceros", "Saber-toothed Tiger", "Swarm of Poisonous Snakes"
+    ]
+}
