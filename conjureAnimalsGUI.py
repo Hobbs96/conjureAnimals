@@ -4,13 +4,13 @@ Hello World, but with more meat.
 """
 
 import wx
+from conjureAnimals import ConjureAnimalsGenerator
 
 class ConjureAnimalsGeneratorFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
         # ensure the parent's __init__ is called
         super(ConjureAnimalsGeneratorFrame, self).__init__(*args, **kw)
-
         # create a panel in the frame
         pnl = wx.Panel(self)
 
@@ -24,7 +24,6 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # create a menu bar
         self.makeMenuBar()
 
-
     def makeMenuBar(self):
         """
         A menu bar is composed of menus, which are composed of menu items.
@@ -37,7 +36,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # The "\t..." syntax defines an accelerator key that also triggers
         # the same event
         loadFileItem = fileMenu.Append(-1, "&Load File...\tCtrl-L", 
-                "Help string shown in status bar for this menu item")
+                "Choose a .json or .txt file to load as the animal set")
         fileMenu.AppendSeparator()
         # When using a stock ID we don't need to specify the menu item's
         # label
@@ -63,12 +62,14 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # activated then the associated handler function will be called.
         self.Bind(wx.EVT_MENU, self.OnExit,  exitItem)
         self.Bind(wx.EVT_MENU, self.OnAbout, aboutItem)
+        self.Bind(wx.EVT_MENU, self.OnLoadFile, loadFileItem)
 
 
     def OnExit(self, event):
         self.Close(True)
 
-    def onLoadFile(self, event):
+    def OnLoadFile(self, event):
+        
         #TODO implement the functionality to load a file and instantiate the conjuration generator
         pass
 
