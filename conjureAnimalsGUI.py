@@ -4,6 +4,7 @@ Hello World, but with more meat.
 """
 
 import wx
+import wx.lib.buttons as buttons
 from conjureAnimals import ConjureAnimalsGenerator
 
 class ConjureAnimalsGeneratorFrame(wx.Frame):
@@ -12,10 +13,10 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # ensure the parent's __init__ is called
         super(ConjureAnimalsGeneratorFrame, self).__init__(*args, **kw)
         # create a panel in the frame
-        pnl = wx.Panel(self)
+        self.panel = wx.Panel(self)
 
         # and put some text with a larger bold font on it
-        st = wx.StaticText(pnl, label="Conjure Animals v1.0", pos=(7,7))
+        st = wx.StaticText(self.panel, label="Conjure Animals v1.0", pos=(7,7))
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
@@ -23,6 +24,10 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
 
         # create a menu bar
         self.makeMenuBar()
+
+        conjureButton = buttons.GenButton(self.panel, -1, "Conjure!", pos=(25, 50))
+        conjureButton.Bind(wx.EVT_BUTTON, self.onConjureButton)
+
 
     def makeMenuBar(self):
         """
@@ -47,7 +52,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         aboutItem = helpMenu.Append(wx.ID_ABOUT)
 
         # Make the menu bar and add the two menus to it. The '&' defines
-        # that the next letter is the "mnemonic" for the menu item. On the
+        # that the next letter is the "mnemonic" for the menu item. on the
         # platforms that support it those letters are underlined and can be
         # triggered from the keyboard.
         menuBar = wx.MenuBar()
@@ -60,25 +65,43 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # Finally, associate a handler function with the EVT_MENU event for
         # each of the menu items. That means that when that menu item is
         # activated then the associated handler function will be called.
-        self.Bind(wx.EVT_MENU, self.OnExit,  exitItem)
-        self.Bind(wx.EVT_MENU, self.OnAbout, aboutItem)
-        self.Bind(wx.EVT_MENU, self.OnLoadFile, loadFileItem)
+        self.Bind(wx.EVT_MENU, self.onExit,  exitItem)
+        self.Bind(wx.EVT_MENU, self.onAbout, aboutItem)
+        self.Bind(wx.EVT_MENU, self.onLoadFile, loadFileItem)
 
 
-    def OnExit(self, event):
+
+
+    def onExit(self, event):
         self.Close(True)
 
-    def OnLoadFile(self, event):
-        
-        #TODO implement the functionality to load a file and instantiate the conjuration generator
-        pass
+    def onLoadFile(self, event):
+        openFileDialog = wx.FileDialog(self, "Open", "", "", 
+                                      "JSON file (*.json)|*.json", 
+                                       wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
+        openFileDialog.ShowModal()
+
+        if openFileDialog.ShowModal() == wx.ID_CANCEL:
+            return     # the user changed their mind
+
+        # Proceed loading the file chosen by the user
+        pathname = openFileDialog.GetPath()
+        try:
+            self.animalGenerator = ConjureAnimalsGenerator(pathname)
+        except IOError:
+            wx.LogError("Cannot open file '%s'." % pathname)
+        openFileDialog.Destroy()
 
 
-    def OnAbout(self, event):
+    def onAbout(self, event):
         wx.MessageBox("This is a wxPython GUI for the Conjure Animals spell in D&D 5e." +
                       "\nSee Hobbs96 on github for more.", 
                       "About Conjure Animals",
                       wx.OK|wx.ICON_INFORMATION)
+
+    def onConjureButton(self, event):
+        pass
+
 
 
 if __name__ == '__main__':
