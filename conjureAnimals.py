@@ -16,7 +16,7 @@ class ConjureAnimalsGenerator:
     def __call__(self, challengeRating):
         if challengeRating < 0:
             raise ValueError('Challenge rating given to the ConjureAnimalsGenerator call must be > 0')
-        self.challengeRating = challengeRating
+        self.challengeRating = float(challengeRating)
         return self._generateAnimals()
     
     def _readInFromFile(self, fileName):
@@ -33,7 +33,8 @@ class ConjureAnimalsGenerator:
             currentCR = 0
             for line in file:
                 if line[0].isdigit():
-                    currentCR = Fraction(line)
+                    currentCR = str(float(line))
+                    print(currentCR)
                 else:
                     self.animalsByCR[currentCR] += line.split(',')
 
@@ -41,8 +42,6 @@ class ConjureAnimalsGenerator:
         # seems that this opens up to a lot of errors... what if the JSON passed in is poorly formatted?
         with open(fileName + '.json') as file:
             self.animalsByCR = json.load(file)
-        for key, value in self.animalsByCR.items():
-            self.animalsByCR[float(key)] = self.animalsByCR.pop(key)
 
     def _generateAnimals(self):
         if self.challengeRating > 0:
@@ -60,9 +59,9 @@ class ConjureAnimalsGenerator:
 
     def _getAnimalSequence(self):
         if self.challengeRating <= 0.25:
-            return self.animalsByCR[0.25] + self.animalsByCR[0]
+            return self.animalsByCR['0.25'] + self.animalsByCR['0']
         else:
-            return self.animalsByCR[self.challengeRating]
+            return self.animalsByCR[str(self.challengeRating)]
 
     def _generateOutput(self):
         result = str()

@@ -25,6 +25,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # create a menu bar
         self.makeMenuBar()
         self.makeConjureButton()
+        self.makeTextControl()
         self.makeEmptyCreatureList()
 
         
@@ -71,6 +72,10 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.onAbout, aboutItem)
         self.Bind(wx.EVT_MENU, self.onLoadFile, loadFileItem)
 
+    def makeTextControl(self):
+        self.CRTextBox = wx.TextCtrl(self.panel, pos=(25, 80), size=(90, 20))
+        self.CRTextBox.Bind(wx.EVT_TEXT_ENTER, self.onConjureButton)
+
     def makeConjureButton(self):
         self.conjureButton = buttons.GenButton(self.panel, -1, "Conjure!", pos=(25, 50))
         self.conjureButton.Bind(wx.EVT_BUTTON, self.onConjureButton)
@@ -88,10 +93,6 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
                                       "JSON file (*.json)|*.json", 
                                        wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
         openFileDialog.ShowModal()
-
-        if openFileDialog.ShowModal() == wx.ID_CANCEL:
-            return     # the user changed their mind
-
         # Proceed loading the file chosen by the user
         pathname = openFileDialog.GetPath()
         try:
@@ -108,7 +109,20 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
                       wx.OK|wx.ICON_INFORMATION)
 
     def onConjureButton(self, event):
-        pass
+        textBoxInput = self.CRTextBox.GetValue()
+        try:
+            textBoxInput = float(textBoxInput)
+        except Exception as e:
+            wx.LogError('Incorrect input given to text box; not convertible to float')
+            return
+        self.generateCreatureList(textBoxInput)
+    
+    def generateCreatureList(self, requestedCR):
+        conjuredAnimals = self.animalGenerator(requestedCR)
+        self.creatureList.DeleteAllItems()
+        for key, value in conjuredAnimals.items():
+            self.creatureList.Append([key, value])
+
 
 
 
