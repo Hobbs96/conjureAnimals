@@ -59,7 +59,7 @@ class ConjureAnimalsGenerator:
 
     def _getAnimalSequence(self):
         if self.challengeRating <= 0.25:
-            return self.animalsByCR['0.25'] + self.animalsByCR['0']
+            return self.animalsByCR['0.25'] + self.animalsByCR['0.125'] + self.animalsByCR['0']
         else:
             return self.animalsByCR[str(self.challengeRating)]
 
