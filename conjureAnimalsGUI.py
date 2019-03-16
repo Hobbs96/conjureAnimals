@@ -14,7 +14,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         super(ConjureAnimalsGeneratorFrame, self).__init__(*args, **kw)
         # create a panel in the frame
         self.panel = wx.Panel(self)
-
+        self.Size = (500, 300)
         # and put some text with a larger bold font on it
         st = wx.StaticText(self.panel, label="Conjure Animals v1.0", pos=(7,7))
         font = st.GetFont()
@@ -24,9 +24,11 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
 
         # create a menu bar
         self.makeMenuBar()
+        self.makeConjureButton()
+        self.makeEmptyCreatureList()
 
-        conjureButton = buttons.GenButton(self.panel, -1, "Conjure!", pos=(25, 50))
-        conjureButton.Bind(wx.EVT_BUTTON, self.onConjureButton)
+        
+
 
 
     def makeMenuBar(self):
@@ -69,8 +71,14 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.Bind(wx.EVT_MENU, self.onAbout, aboutItem)
         self.Bind(wx.EVT_MENU, self.onLoadFile, loadFileItem)
 
+    def makeConjureButton(self):
+        self.conjureButton = buttons.GenButton(self.panel, -1, "Conjure!", pos=(25, 50))
+        self.conjureButton.Bind(wx.EVT_BUTTON, self.onConjureButton)
 
-
+    def makeEmptyCreatureList(self):
+        self.creatureList = wx.ListCtrl(self.panel, wx.ID_ANY, style=wx.LC_REPORT, pos=(120, 50))
+        self.creatureList.InsertColumn(0, 'Creature', wx.LIST_FORMAT_CENTER, width=140)
+        self.creatureList.InsertColumn(1, 'Number', wx.LIST_FORMAT_LEFT, width = 70)
 
     def onExit(self, event):
         self.Close(True)
