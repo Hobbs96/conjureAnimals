@@ -16,6 +16,7 @@ class Creature:
     def __repr__(self):
         return 'Name: {}, CR: {}, Terrains: {}, Type: {}'.format(self.name, self.challengeRating, self.terrains, self.creatureType)
 
+#invoke as creature = Creature(json.loads(jsonObject, object_hook = asCreature))
 def asCreature(dictionary):
     return Creature(dictionary['Name'], dictionary['ChallengeRating'],
      dictionary.get('Terrains', None), dictionary.get('Type', None))

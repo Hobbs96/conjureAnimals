@@ -21,17 +21,17 @@ class ConjureAnimalsGenerator:
         self.challengeRating = float(challengeRating)
         return self._generateAnimals()
     
-    def _readInFromFile(self, fileName):
-        fileName, fileExtension = os.path.splitext(fileName)
+    def _readInFromFile(self, filePath):
+        fileName, fileExtension = os.path.splitext(filePath)
         if (fileExtension == '.txt'):
-            self._readFromTxtFile(fileName)
+            self._readFromTxtFile(filePath)
         elif (fileExtension == '.json'):
-            self._readFromJSONFile(fileName)
+            self._readFromJSONFile(filePath)
         else:
             raise ValueError('The file type passed to the ConjureAnimalsGenerator must be ".txt" or ".json"')
 
-    def _readFromTxtFile(self, fileName):
-        with open(fileName + '.txt') as file:
+    def _readFromTxtFile(self, filePath):
+        with open(filePath) as file:
             currentCR = 0
             for line in file:
                 if line[0].isdigit():
@@ -40,8 +40,8 @@ class ConjureAnimalsGenerator:
                 else:
                     self.animalsByCR[currentCR] += line.split(',')
 
-    def _readFromJSONFile(self, fileName):
-        with open(fileName + '.json') as file:
+    def _readFromJSONFile(self, filePath):
+        with open(filePath) as file:
             self.animalsByCR = json.load(file)
 
     def _generateAnimals(self):
