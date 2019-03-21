@@ -4,6 +4,9 @@ from fractions import Fraction
 import json
 import os
 
+#TODO:rewrite the class with metadata config files to cover all of the non-specific conjure spells
+#conjure woodland beings, minor elementals
+
 class ConjureAnimalsGenerator:
     def __init__(self, fileName):
         self.animalsByCR = defaultdict(list)
@@ -58,6 +61,7 @@ class ConjureAnimalsGenerator:
         return animalCounts
 
     def _getAnimalSequence(self):
+        # the number specifics should be moved out into a metadata file
         if self.challengeRating <= 0.25:
             return self.animalsByCR['0.25'] + self.animalsByCR['0.125'] + self.animalsByCR['0']
         else:

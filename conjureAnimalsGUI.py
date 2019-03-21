@@ -32,14 +32,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
 
 
 
-    def makeMenuBar(self):
-        """
-        A menu bar is composed of menus, which are composed of menu items.
-        This method builds a set of menus and binds handlers to be called
-        when the menu item is selected.
-        """
-        
-        # Make a file menu with Hello and Exit items
+    def makeMenuBar(self): 
         fileMenu = wx.Menu()
         # The "\t..." syntax defines an accelerator key that also triggers
         # the same event
@@ -50,14 +43,9 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # label
         exitItem = fileMenu.Append(wx.ID_EXIT)
 
-        # Now a help menu for the about item
         helpMenu = wx.Menu()
         aboutItem = helpMenu.Append(wx.ID_ABOUT)
 
-        # Make the menu bar and add the two menus to it. The '&' defines
-        # that the next letter is the "mnemonic" for the menu item. on the
-        # platforms that support it those letters are underlined and can be
-        # triggered from the keyboard.
         menuBar = wx.MenuBar()
         menuBar.Append(fileMenu, "&File")
         menuBar.Append(helpMenu, "&Help")
