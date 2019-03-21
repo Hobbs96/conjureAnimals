@@ -1,6 +1,5 @@
 from collections import defaultdict
 from random import randint
-from fractions import Fraction
 import json
 import os
 
@@ -42,7 +41,6 @@ class ConjureAnimalsGenerator:
                     self.animalsByCR[currentCR] += line.split(',')
 
     def _readFromJSONFile(self, fileName):
-        # seems that this opens up to a lot of errors... what if the JSON passed in is poorly formatted?
         with open(fileName + '.json') as file:
             self.animalsByCR = json.load(file)
 
