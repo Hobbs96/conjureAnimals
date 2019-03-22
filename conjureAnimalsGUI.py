@@ -1,7 +1,4 @@
 #!/bin/python
-"""
-Hello World, but with more meat.
-"""
 
 import wx
 import wx.lib.buttons as buttons
@@ -16,7 +13,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.panel = wx.Panel(self)
         self.Size = (500, 300)
         # and put some text with a larger bold font on it
-        st = wx.StaticText(self.panel, label="Conjure Animals v1.0", pos=(7,7))
+        st = wx.StaticText(self.panel, label="Conjure Animals v1.0.1", pos=(7,7))
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
@@ -27,10 +24,6 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.makeConjureButton()
         self.makeTextControl()
         self.makeEmptyCreatureList()
-
-        
-
-
 
     def makeMenuBar(self): 
         fileMenu = wx.Menu()
