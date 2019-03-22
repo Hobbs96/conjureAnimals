@@ -29,7 +29,6 @@ class ConjureAnimalsGenerator:
         else:
             raise ValueError('The file type passed to the ConjureAnimalsGenerator must be ".json"')
 
-
     def _readFromJSONFile(self, filePath):
         with open(filePath) as file:
             data = json.load(file)
@@ -37,7 +36,6 @@ class ConjureAnimalsGenerator:
                 if entry["Type"] == "Beast":
                     newCreature = asCreature(entry)
                     self.animalsByCR[entry['ChallengeRating']].append(newCreature)
-
 
     def _generateAnimals(self):
         if self.challengeRating > 0:

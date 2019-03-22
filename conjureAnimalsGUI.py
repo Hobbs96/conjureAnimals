@@ -109,7 +109,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         conjuredAnimals = self.animalGenerator(requestedCR)
         self.creatureList.DeleteAllItems()
         for key, value in conjuredAnimals.items():
-            self.creatureList.Append([key, value])
+            self.creatureList.Append([key.name, value])
 
 
 
