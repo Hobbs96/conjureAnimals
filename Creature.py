@@ -1,3 +1,5 @@
+import json
+
 class Creature:
     def __init__(self, name, challengeRating, terrains=["Land"], creatureType="Beast"):
         self.name = name
@@ -7,7 +9,7 @@ class Creature:
         if not terrains:
             raise terrainError
         for terrain in terrains:
-            if terrain != 'Land' or terrain != 'Water' or terrain != 'Sky':
+            if terrain != 'Land' and terrain != 'Water' and terrain != 'Sky':
                 raise terrainError
                 
         self.terrains = terrains
@@ -20,3 +22,15 @@ class Creature:
 def asCreature(dictionary):
     return Creature(dictionary['Name'], dictionary['ChallengeRating'],
      dictionary.get('Terrains', None), dictionary.get('Type', None))
+
+
+def asJSONString(creature):
+    result = ('"{}":\n'.format(creature.name))
+    elements = dict()
+    elements["Name"] = creature.name
+    elements["ChallengeRating"] = creature.challengeRating
+    elements['Terrains'] = creature.terrains
+    elements['Type'] = creature.creatureType
+    result += json.dumps(elements, indent=4)
+    result += ',\n'
+    return result

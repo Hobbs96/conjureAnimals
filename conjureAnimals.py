@@ -2,6 +2,7 @@ from collections import defaultdict
 from random import randint
 import json
 import os
+from Creature import *
 
 #TODO:rewrite the class with metadata config files to cover all of the non-specific conjure spells
 #conjure woodland beings, minor elementals
@@ -42,7 +43,10 @@ class ConjureAnimalsGenerator:
 
     def _readFromJSONFile(self, filePath):
         with open(filePath) as file:
-            self.animalsByCR = json.load(file)
+            data = file.read()
+            self.animalsByCR = {creature["ChallengeRating"] : creature
+             for creature in json.loads(data, object_hook=asCreature) if creature["Type"] == "Beast"}
+
 
     def _generateAnimals(self):
         if self.challengeRating > 0:

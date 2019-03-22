@@ -1,0 +1,21 @@
+{
+        "Frog":
+    {
+        "Name": "Frog",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Water"
+        ],
+        "Type": "Beast"
+    },
+    "Sea Horse":
+    {
+        "Name": "Sea Horse",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Water"
+        ],
+        "Type": "Beast"
+    }
+}
