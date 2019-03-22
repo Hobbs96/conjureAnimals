@@ -24,22 +24,11 @@ class ConjureAnimalsGenerator:
     
     def _readInFromFile(self, filePath):
         fileName, fileExtension = os.path.splitext(filePath)
-        if (fileExtension == '.txt'):
-            self._readFromTxtFile(filePath)
-        elif (fileExtension == '.json'):
+        if (fileExtension == '.json'):
             self._readFromJSONFile(filePath)
         else:
-            raise ValueError('The file type passed to the ConjureAnimalsGenerator must be ".txt" or ".json"')
+            raise ValueError('The file type passed to the ConjureAnimalsGenerator must be ".json"')
 
-    def _readFromTxtFile(self, filePath):
-        with open(filePath) as file:
-            currentCR = 0
-            for line in file:
-                if line[0].isdigit():
-                    currentCR = str(float(line))
-                    print(currentCR)
-                else:
-                    self.animalsByCR[currentCR] += line.split(',')
 
     def _readFromJSONFile(self, filePath):
         with open(filePath) as file:
