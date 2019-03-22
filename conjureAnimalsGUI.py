@@ -13,7 +13,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.panel = wx.Panel(self)
         self.Size = (500, 300)
         # and put some text with a larger bold font on it
-        st = wx.StaticText(self.panel, label="Conjure Animals v1.0.1", pos=(7,7))
+        st = wx.StaticText(self.panel, label="Conjure Animals v1.1", pos=(7,7))
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
@@ -100,7 +100,14 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.generateCreatureList(textBoxInput)
     
     def generateCreatureList(self, requestedCR):
-        conjuredAnimals = self.animalGenerator(requestedCR)
+        terrains = set()
+        if self.landCheckBox.GetValue():
+            terrains.add('Land')
+        if self.waterCheckBox.GetValue():
+            terrains.add('Water')
+        if self.skyCheckBox.GetValue():
+            terrains.add('Sky')
+        conjuredAnimals = self.animalGenerator(requestedCR, terrains)
         self.creatureList.DeleteAllItems()
         for key, value in conjuredAnimals.items():
             self.creatureList.Append([key.name, value])

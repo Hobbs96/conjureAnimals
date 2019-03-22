@@ -16,10 +16,11 @@ class ConjureAnimalsGenerator:
     def __repr__(self):
         pass
 
-    def __call__(self, challengeRating):
+    def __call__(self, challengeRating, terrains):
         if challengeRating < 0:
             raise ValueError('Challenge rating given to the ConjureAnimalsGenerator call must be > 0')
         self.challengeRating = float(challengeRating)
+        self.terrains = set(terrains)
         return self._generateAnimals()
     
     def _readInFromFile(self, filePath):
@@ -54,9 +55,11 @@ class ConjureAnimalsGenerator:
     def _getAnimalSequence(self):
         # the number specifics should be moved out into a metadata file
         if self.challengeRating <= 0.25:
-            return self.animalsByCR['0.25'] + self.animalsByCR['0.125'] + self.animalsByCR['0']
+            sequence = self.animalsByCR['0.25'] + self.animalsByCR['0.125'] + self.animalsByCR['0']
         else:
-            return self.animalsByCR[str(self.challengeRating)]
+            sequence = self.animalsByCR[str(self.challengeRating)]
+            
+        return [creature for creature in sequence if set(creature.terrains).intersection(self.terrains)]
 
     def _generateOutput(self):
         result = str()
