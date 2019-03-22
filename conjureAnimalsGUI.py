@@ -24,6 +24,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         self.makeConjureButton()
         self.makeTextControl()
         self.makeEmptyCreatureList()
+        self.generateTerrainCheckBoxes()
 
     def makeMenuBar(self): 
         fileMenu = wx.Menu()
@@ -104,6 +105,11 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         for key, value in conjuredAnimals.items():
             self.creatureList.Append([key.name, value])
 
+    def generateTerrainCheckBoxes(self):
+        self.landCheckBox = wx.CheckBox(self.panel, label = 'Land', pos = (25,110)) 
+        self.waterCheckBox = wx.CheckBox(self.panel, label = 'Water', pos = (25,130)) 
+        self.skyCheckBox = wx.CheckBox(self.panel, label = 'Sky', pos = (25, 150)) 
+        self.landCheckBox.SetValue(True)
 
 
 
