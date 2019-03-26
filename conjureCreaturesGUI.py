@@ -2,18 +2,18 @@
 
 import wx
 import wx.lib.buttons as buttons
-from conjureAnimals import ConjureAnimalsGenerator
+from conjureCreatures import ConjureCreaturesGenerator
 
-class ConjureAnimalsGeneratorFrame(wx.Frame):
+class ConjureCreaturesGeneratorFrame(wx.Frame):
 
     def __init__(self, *args, **kw):
         # ensure the parent's __init__ is called
-        super(ConjureAnimalsGeneratorFrame, self).__init__(*args, **kw)
+        super(ConjureCreaturesGeneratorFrame, self).__init__(*args, **kw)
         # create a panel in the frame
         self.panel = wx.Panel(self)
         self.Size = (500, 300)
         # and put some text with a larger bold font on it
-        st = wx.StaticText(self.panel, label="Conjure Animals v1.1", pos=(7,7))
+        st = wx.StaticText(self.panel, label="Conjure Creatures v0.2.0", pos=(7,7))
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
@@ -31,7 +31,7 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # The "\t..." syntax defines an accelerator key that also triggers
         # the same event
         loadFileItem = fileMenu.Append(-1, "&Load File...\tCtrl-L", 
-                "Choose a .json or .txt file to load as the animal set")
+                "Choose a .json or .txt file to load as the creature set")
         fileMenu.AppendSeparator()
         # When using a stock ID we don't need to specify the menu item's
         # label
@@ -78,16 +78,16 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
         # Proceed loading the file chosen by the user
         pathname = openFileDialog.GetPath()
         try:
-            self.animalGenerator = ConjureAnimalsGenerator(pathname)
+            self.creatureGenerator = ConjureCreaturesGenerator(pathname)
         except IOError:
             wx.LogError("Cannot open file '%s'." % pathname)
         openFileDialog.Destroy()
 
 
     def onAbout(self, event):
-        wx.MessageBox("This is a wxPython GUI for the Conjure Animals spell in D&D 5e." +
+        wx.MessageBox("This is a wxPython GUI for the Conjure Creatures spell in D&D 5e." +
                       "\nSee Hobbs96 on github for more.", 
-                      "About Conjure Animals",
+                      "About Conjure Creatures",
                       wx.OK|wx.ICON_INFORMATION)
 
     def onConjureButton(self, event):
@@ -107,9 +107,9 @@ class ConjureAnimalsGeneratorFrame(wx.Frame):
             terrains.add('Water')
         if self.skyCheckBox.GetValue():
             terrains.add('Sky')
-        conjuredAnimals = self.animalGenerator(requestedCR, terrains)
+        conjuredCreatures = self.creatureGenerator(requestedCR, terrains)
         self.creatureList.DeleteAllItems()
-        for key, value in conjuredAnimals.items():
+        for key, value in conjuredCreatures.items():
             self.creatureList.Append([key.name, value])
 
     def generateTerrainCheckBoxes(self):
@@ -124,6 +124,6 @@ if __name__ == '__main__':
     # When this module is run (not imported) then create the app, the
     # frame, show it, and start the event loop.
     app = wx.App()
-    frm = ConjureAnimalsGeneratorFrame(None, title='Conjure Animals')
+    frm = ConjureCreaturesGeneratorFrame(None, title='Conjure Creatures')
     frm.Show()
     app.MainLoop()
