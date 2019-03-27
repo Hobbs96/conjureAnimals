@@ -32,5 +32,4 @@ def asJSONString(creature):
     elements['Terrains'] = creature.terrains
     elements['Type'] = creature.creatureType
     result += json.dumps(elements, indent=4)
-    result += ',\n'
     return result
