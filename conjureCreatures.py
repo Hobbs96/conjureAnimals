@@ -33,8 +33,8 @@ class ConjureCreaturesGenerator:
     def _readFromJSONFile(self, filePath):
         with open(filePath) as file:
             data = json.load(file)
-            for name, entry in data.items():
-                if entry["Type"] == "Beast":
+            for key, lst in data.items():
+                for entry in lst:
                     newCreature = asCreature(entry)
                     self.creaturesByCR[entry['ChallengeRating']].append(newCreature)
 

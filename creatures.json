@@ -1,749 +1,698 @@
+{"Beasts":[
 {
-    "Frog":
-    {
-        "Name": "Frog",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Sea Horse":
-    {
-        "Name": "Sea Horse",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Baboon":
-    {
-        "Name": "Baboon",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Badger":
-    {
-        "Name": "Badger",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Bat":
-    {
-        "Name": "Bat",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Cat":
-    {
-        "Name": "Cat",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Crab":
-    {
-        "Name": "Crab",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Deer":
-    {
-        "Name": "Deer",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Eagle":
-    {
-        "Name": "Eagle",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Fire Beetle":
-    {
-        "Name": "Giant Fire Beetle",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Goat":
-    {
-        "Name": "Goat",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Hawk":
-    {
-        "Name": "Hawk",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Hyena":
-    {
-        "Name": "Hyena",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Jackal":
-    {
-        "Name": "Jackal",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Lizard":
-    {
-        "Name": "Lizard",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Octopus":
-    {
-        "Name": "Octopus",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Owl":
-    {
-        "Name": "Owl",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Quipper":
-    {
-        "Name": "Quipper",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Rat":
-    {
-        "Name": "Rat",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Raven":
-    {
-        "Name": "Raven",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Scorpion":
-    {
-        "Name": "Scorpion",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Spider":
-    {
-        "Name": "Spider",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Vulture":
-    {
-        "Name": "Vulture",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Weasel":
-    {
-        "Name": "Weasel",
-        "ChallengeRating": "0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Blood Hawk":
-    {
-        "Name": "Blood Hawk",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Camel":
-    {
-        "Name": "Camel",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Flying Snake":
-    {
-        "Name": "Flying Snake",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land", "Sky", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Crab":
-    {
-        "Name": "Giant Crab",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Rat":
-    {
-        "Name": "Giant Rat",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Weasel":
-    {
-        "Name": "Giant Weasel",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Mastiff":
-    {
-        "Name": "Mastiff",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Mule":
-    {
-        "Name": "Mule",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Poisonous Snake":
-    {
-        "Name": "Poisonous Snake",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Pony":
-    {
-        "Name": "Pony",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Stirge":
-    {
-        "Name": "Stirge",
-        "ChallengeRating": "0.125",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Axe Beak":
-    {
-        "Name": "Axe Beak",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Boar":
-    {
-        "Name": "Boar",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Constrictor Snake":
-    {
-        "Name": "Constrictor Snake",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Draft Horse":
-    {
-        "Name": "Draft Horse",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Elk":
-    {
-        "Name": "Elk",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Badger":
-    {
-        "Name": "Giant Badger",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Bat":
-    {
-        "Name": "Giant Bat",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Centipede":
-    {
-        "Name": "Giant Centipede",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Frog":
-    {
-        "Name": "Giant Frog",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Lizard":
-    {
-        "Name": "Giant Lizard",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Owl":
-    {
-        "Name": "Giant Owl",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Poisonous Snake":
-    {
-        "Name": "Giant Poisonous Snake",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Wolf Spider":
-    {
-        "Name": "Giant Wolf Spider",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Panther":
-    {
-        "Name": "Panther",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Riding Horse":
-    {
-        "Name": "Riding Horse",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Swarm of Bats":
-    {
-        "Name": "Swarm of Bats",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Swarm of Rats":
-    {
-        "Name": "Swarm of Rats",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Swarm of Ravens":
-    {
-        "Name": "Swarm of Ravens",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Wolf":
-    {
-        "Name": "Wolf",
-        "ChallengeRating": "0.25",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Ape":
-    {
-        "Name": "Ape",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Black Bear":
-    {
-        "Name": "Black Bear",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Crocodile":
-    {
-        "Name": "Crocodile",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Goat":
-    {
-        "Name": "Giant Goat",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Sea Horse":
-    {
-        "Name": "Giant Sea Horse",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Wasp":
-    {
-        "Name": "Giant Wasp",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Reef Shark":
-    {
-        "Name": "Reef Shark",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Swarm of Insects":
-    {
-        "Name": "Swarm of Insects",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Warhorse":
-    {
-        "Name": "Warhorse",
-        "ChallengeRating": "0.5",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Brown Bear":
-    {
-        "Name": "Brown Bear",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Dire Wolf":
-    {
-        "Name": "Dire Wolf",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Eagle":
-    {
-        "Name": "Giant Eagle",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Hyena":
-    {
-        "Name": "Giant Hyena",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Octopus":
-    {
-        "Name": "Giant Octopus",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Spider":
-    {
-        "Name": "Giant Spider",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Toad":
-    {
-        "Name": "Giant Toad",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Vulture":
-    {
-        "Name": "Giant Vulture",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land", "Sky"
-        ],
-        "Type": "Beast"
-    },
-    "Lion":
-    {
-        "Name": "Lion",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Swarm of Quippers":
-    {
-        "Name": "Swarm of Quippers",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Tiger":
-    {
-        "Name": "Tiger",
-        "ChallengeRating": "1.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Boar":
-    {
-        "Name": "Giant Boar",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Constrictor Snake":
-    {
-        "Name": "Giant Constrictor Snake",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Giant Elk":
-    {
-        "Name": "Giant Elk",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Hunter Shark":
-    {
-        "Name": "Hunter Shark",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Plesiosaurus":
-    {
-        "Name": "Plesiosaurus",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Polar Bear":
-    {
-        "Name": "Polar Bear",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    },
-    "Rhinoceros":
-    {
-        "Name": "Rhinoceros",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Saber-toothed Tiger":
-    {
-        "Name": "Saber-toothed Tiger",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land"
-        ],
-        "Type": "Beast"
-    },
-    "Swarm of Poisonous Snakes":
-    {
-        "Name": "Swarm of Poisonous Snakes",
-        "ChallengeRating": "2.0",
-        "Terrains": [
-            "Land", "Water"
-        ],
-        "Type": "Beast"
-    }
+    "Name": "Frog",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Sea Horse",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Baboon",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Badger",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Bat",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Cat",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Crab",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Deer",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Eagle",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Fire Beetle",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Goat",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Hawk",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Hyena",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Jackal",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Lizard",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Octopus",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Owl",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Quipper",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Rat",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Raven",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Scorpion",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Spider",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Vulture",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Weasel",
+    "ChallengeRating": "0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Blood Hawk",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Camel",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Flying Snake",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land",
+        "Sky",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Crab",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Rat",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Weasel",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Mastiff",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Mule",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Poisonous Snake",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Pony",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Stirge",
+    "ChallengeRating": "0.125",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Axe Beak",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Boar",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Constrictor Snake",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Draft Horse",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Elk",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Badger",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Bat",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Centipede",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Frog",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Lizard",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Owl",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Poisonous Snake",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Wolf Spider",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Panther",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Riding Horse",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Swarm of Bats",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Swarm of Rats",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Swarm of Ravens",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Wolf",
+    "ChallengeRating": "0.25",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Ape",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Black Bear",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Crocodile",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Goat",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Sea Horse",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Wasp",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Reef Shark",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Swarm of Insects",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Warhorse",
+    "ChallengeRating": "0.5",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Brown Bear",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Dire Wolf",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Eagle",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Hyena",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Octopus",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Spider",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Toad",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Vulture",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land",
+        "Sky"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Lion",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Swarm of Quippers",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Tiger",
+    "ChallengeRating": "1.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Boar",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Constrictor Snake",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Giant Elk",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Hunter Shark",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Plesiosaurus",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Polar Bear",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Rhinoceros",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Saber-toothed Tiger",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land"
+    ],
+    "Type": "Beast"
+},
+{
+    "Name": "Swarm of Poisonous Snakes",
+    "ChallengeRating": "2.0",
+    "Terrains": [
+        "Land",
+        "Water"
+    ],
+    "Type": "Beast"
 }
+]}
