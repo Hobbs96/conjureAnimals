@@ -25,7 +25,6 @@ def asCreature(dictionary):
 
 
 def asJSONString(creature):
-    result = ('"{}":\n'.format(creature.name))
     elements = dict()
     elements["Name"] = creature.name
     elements["ChallengeRating"] = creature.challengeRating
