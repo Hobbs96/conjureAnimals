@@ -17,9 +17,16 @@ class ConjureCreaturesGenerator:
         return self
 
     def __call__(self, challengeRating, terrains):
+        errorStringMiddle = 'given to the ConjureCreaturesGenerator call must be'
         if challengeRating < 0:
-            raise ValueError('Challenge rating given to the ConjureCreaturesGenerator call must be > 0')
-        self.challengeRating = float(challengeRating)
+            raise ValueError('Challenge rating ' + errorStringMiddle + ' >= 0')
+        if not terrains:
+            raise ValueError('Terrains collection ' + errorStringMiddle + ' non-empty')
+
+        if challengeRating != 0:
+            self.challengeRating = float(challengeRating)
+        else:
+            self.challengeRating == int(challengeRating)
         self.terrains = set(terrains)
         return self._generateCreatures()
     
@@ -54,6 +61,9 @@ class ConjureCreaturesGenerator:
 
     def _getCreatureSequence(self):
         # the number specifics should be moved out into a metadata file
+        if str(self.challengeRating) not in self.creaturesByCR:
+            raise KeyError('This generator object has no creatures of the requested Challenge Rating')
+
         if self.challengeRating <= 0.25:
             sequence = self.creaturesByCR['0.25'] + self.creaturesByCR['0.125'] + self.creaturesByCR['0']
         else:
