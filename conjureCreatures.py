@@ -14,7 +14,7 @@ class ConjureCreaturesGenerator:
         self.challengeRating = 0
     
     def __repr__(self):
-        pass
+        return self
 
     def __call__(self, challengeRating, terrains):
         if challengeRating < 0:
