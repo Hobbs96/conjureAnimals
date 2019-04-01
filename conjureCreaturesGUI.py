@@ -2,7 +2,7 @@
 
 import wx
 import wx.lib.buttons as buttons
-from conjureCreatures import ConjureCreaturesGenerator
+from ConjureCreaturesGenerator import ConjureCreaturesGenerator
 
 class ConjureCreaturesGeneratorFrame(wx.Frame):
 
