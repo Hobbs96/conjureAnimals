@@ -27,6 +27,7 @@ class ConjureCreaturesGenerator:
             self.challengeRating = float(challengeRating)
         else:
             self.challengeRating == int(challengeRating)
+        #TODO implement terrains checking with validTerrains.json
         self.terrains = set(terrains)
         return self._generateCreatures()
     
