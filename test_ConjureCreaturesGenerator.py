@@ -23,7 +23,12 @@ class TestConjureCreaturesGenerator():
                     generator(0, [])
                 except Exception as e3:
                     print(e3)
-                    return
+                    try:
+                        generator(0, ['Sand'])
+                        #TODO this needs to throw an exception
+                    except Exception as e4:
+                        print(e4)
+                        return
         assert(False)
     
 

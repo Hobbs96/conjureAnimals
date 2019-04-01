@@ -72,10 +72,4 @@ class ConjureCreaturesGenerator:
             
         return [creature for creature in sequence if set(creature.terrains).intersection(self.terrains)]
 
-    def _generateOutput(self):
-        result = str()
-        for key, value in self._generateCreatures().items():
-            result += str(key).lstrip().rstrip() + ': ' + str(value) + '\n'
-        return result
-
             
