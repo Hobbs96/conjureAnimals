@@ -8,7 +8,7 @@ def buildBeastList(file):
         data = json.load(jsonFile)
         for key, entry in data.items():
             newFile.write(asJSONString(asCreature(entry)))
-            newFile.write(',\n')
+            newFile.write(',\n') # issue here with a trailing comma
     newFile.write(']}')
     newFile.close()
 
