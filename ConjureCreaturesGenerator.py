@@ -17,12 +17,7 @@ class ConjureCreaturesGenerator:
         return self
 
     def __call__(self, challengeRating, terrains):
-        errorStringMiddle = 'given to the ConjureCreaturesGenerator call must be'
-        if challengeRating < 0:
-            raise ValueError('Challenge rating ' + errorStringMiddle + ' >= 0')
-        if not terrains:
-            raise ValueError('Terrains collection ' + errorStringMiddle + ' non-empty')
-
+        self.validateCallInput(challengeRating, terrains)
         if challengeRating != 0:
             self.challengeRating = float(challengeRating)
         else:
@@ -30,6 +25,13 @@ class ConjureCreaturesGenerator:
         #TODO implement terrains checking with validTerrains.json
         self.terrains = set(terrains)
         return self._generateCreatures()
+
+    def validateCallInput(self, challengeRating, terrains):
+        errorStringMiddle = 'given to the ConjureCreaturesGenerator call must be'
+        if challengeRating < 0:
+            raise ValueError('Challenge rating ' + errorStringMiddle + ' >= 0')
+        if not terrains:
+            raise ValueError('Terrains collection ' + errorStringMiddle + ' non-empty')
     
     def _readInFromFile(self, filePath):
         fileName, fileExtension = os.path.splitext(filePath)
