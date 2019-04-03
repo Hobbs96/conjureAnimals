@@ -1,5 +1,5 @@
 # conjureCreaturesDnD5e
-A utility for randomly generating the creatures created by the Conjure Animals spell in D&D 5e.
+A utility for randomly generating the creatures created by Conjuration spell in D&D 5e.
 
 Don't hesitate to contact clarklindsay96@gmail.com with any feedback, feature requests, or other questions. Additionally,
 I welcome any pull requests with the requirement that you write the cleanest code you can. 
