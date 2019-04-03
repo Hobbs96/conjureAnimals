@@ -572,8 +572,7 @@
     "Name": "Giant Spider",
     "ChallengeRating": "1.0",
     "Terrains": [
-        "Land",
-        "Water"
+        "Land"
     ],
     "Type": "Beast"
 },
