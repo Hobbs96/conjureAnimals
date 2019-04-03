@@ -1,5 +1,5 @@
 {
-    "Terrains":
+    "ValidTerrains":
     [
         "Land", "Water", "Sky"
     ]
