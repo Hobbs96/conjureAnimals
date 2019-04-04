@@ -4,8 +4,7 @@ import json
 import os
 from Creature import *
 
-#TODO:rewrite the class with metadata config files to cover all of the non-specific conjure spells
-#conjure woodland beings, minor elementals
+#TODO:rewrite the class to handle all of the various conjuration spells without loading multiple files
 
 class ConjureCreaturesGenerator:
     def __init__(self, fileName):
