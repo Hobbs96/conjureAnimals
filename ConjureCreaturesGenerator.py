@@ -22,7 +22,6 @@ class ConjureCreaturesGenerator:
             self.challengeRating = float(challengeRating)
         else:
             self.challengeRating == int(challengeRating)
-        #TODO implement terrains checking with validTerrains.json
         self.terrains = set(terrains)
         return self._generateCreatures()
 
@@ -32,6 +31,14 @@ class ConjureCreaturesGenerator:
             raise ValueError('Challenge rating ' + errorStringMiddle + ' >= 0')
         if not terrains:
             raise ValueError('Terrains collection ' + errorStringMiddle + ' non-empty')
+        #TODO the below code is hard-coded, although the values therein aren't expected to change. Fix necessary?
+        try:
+            validTerrainsFile = open('validTerrains.json')
+            validTerrains = set(json.load(validTerrainsFile)["ValidTerrains"])
+        except:
+            raise ValueError('Failed to load validTerrains.json file')
+        if not validTerrains.intersection(terrains):
+            raise ValueError('All entries in the terrains sequence ' + errorStringMiddle + ' "Air", "Land", or "Water"')
     
     def _readInFromFile(self, filePath):
         fileName, fileExtension = os.path.splitext(filePath)
