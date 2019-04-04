@@ -37,7 +37,7 @@
         "ChallengeRating": "0",
         "Terrains": [
             "Land",
-            "Sky"
+            "Air"
         ],
         "Type": "Beast"
     },
@@ -71,7 +71,7 @@
         "ChallengeRating": "0",
         "Terrains": [
             "Land",
-            "Sky"
+            "Air"
         ],
         "Type": "Beast"
     },
@@ -96,7 +96,7 @@
         "ChallengeRating": "0",
         "Terrains": [
             "Land",
-            "Sky"
+            "Air"
         ],
         "Type": "Beast"
     },
@@ -138,7 +138,7 @@
         "ChallengeRating": "0",
         "Terrains": [
             "Land",
-            "Sky"
+            "Air"
         ],
         "Type": "Beast"
     },

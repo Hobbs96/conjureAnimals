@@ -23,6 +23,6 @@ class TestCreature():
 
     def test_repr(self):
         dog = Creature('Doggo', '1')
-        assert(str(dog) == "Name: Doggo, CR: 1, Terrains: ['Land'], Type: Beast")
+        assert(str(dog) == "(Name: Doggo, CR: 1, Terrains: ['Land'], Type: Beast)")
             
         

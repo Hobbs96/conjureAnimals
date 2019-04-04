@@ -16,7 +16,7 @@ class TestConjureCreaturesGenerator():
         except Exception as e1:
             print(e1)
             try:
-                generator(40, ['Land', 'Sky', 'Water'])
+                generator(40, ['Land', 'Air', 'Water'])
             except Exception as e2:
                 print(e2)
                 try:
