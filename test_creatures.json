@@ -1,0 +1,153 @@
+{"Beasts":[
+    {
+        "Name": "Frog",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Water"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Sea Horse",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Water"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Baboon",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Badger",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Bat",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Air"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Cat",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Crab",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Water"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Deer",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Eagle",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Air"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Giant Fire Beetle",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Goat",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Hawk",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Air"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Hyena",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Jackal",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Lizard",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Octopus",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Water"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Owl",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Land",
+            "Air"
+        ],
+        "Type": "Beast"
+    },
+    {
+        "Name": "Quipper",
+        "ChallengeRating": "0",
+        "Terrains": [
+            "Water"
+        ],
+        "Type": "Beast"
+    }]
+}

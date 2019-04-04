@@ -37,7 +37,7 @@
     "ChallengeRating": "0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -71,7 +71,7 @@
     "ChallengeRating": "0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -96,7 +96,7 @@
     "ChallengeRating": "0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -138,7 +138,7 @@
     "ChallengeRating": "0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -163,7 +163,7 @@
     "ChallengeRating": "0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -188,7 +188,7 @@
     "ChallengeRating": "0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -205,7 +205,7 @@
     "ChallengeRating": "0.125",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -222,7 +222,7 @@
     "ChallengeRating": "0.125",
     "Terrains": [
         "Land",
-        "Sky",
+        "Air",
         "Water"
     ],
     "Type": "Beast"
@@ -290,7 +290,7 @@
     "ChallengeRating": "0.125",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -348,7 +348,7 @@
     "ChallengeRating": "0.25",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -382,7 +382,7 @@
     "ChallengeRating": "0.25",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -431,7 +431,7 @@
     "Name": "Swarm of Rats",
     "ChallengeRating": "0.25",
     "Terrains": [
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -440,7 +440,7 @@
     "ChallengeRating": "0.25",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -498,7 +498,7 @@
     "ChallengeRating": "0.5",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -515,7 +515,7 @@
     "ChallengeRating": "0.5",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -548,7 +548,7 @@
     "ChallengeRating": "1.0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },
@@ -572,8 +572,7 @@
     "Name": "Giant Spider",
     "ChallengeRating": "1.0",
     "Terrains": [
-        "Land",
-        "Water"
+        "Land"
     ],
     "Type": "Beast"
 },
@@ -591,7 +590,7 @@
     "ChallengeRating": "1.0",
     "Terrains": [
         "Land",
-        "Sky"
+        "Air"
     ],
     "Type": "Beast"
 },

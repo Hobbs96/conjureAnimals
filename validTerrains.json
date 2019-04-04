@@ -1,0 +1,6 @@
+{
+    "ValidTerrains":
+    [
+        "Land", "Water", "Air"
+    ]
+}

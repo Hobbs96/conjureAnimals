@@ -5,18 +5,19 @@ class Creature:
         self.name = name
         self.challengeRating = challengeRating
 
-        terrainError = ValueError('A creatures terrains must be one of: "Land", "Water", or "Sky"')
+        terrainError = ValueError('All of a creatures terrains must be one of: "Land", "Water", or "Air",' +
+        'and it must have at least one')
         if not terrains:
             raise terrainError
         for terrain in terrains:
-            if terrain != 'Land' and terrain != 'Water' and terrain != 'Sky':
+            if terrain != 'Land' and terrain != 'Water' and terrain != 'Air':
                 raise terrainError
                 
         self.terrains = terrains
         self.creatureType = creatureType
     
     def __repr__(self):
-        return 'Name: {}, CR: {}, Terrains: {}, Type: {}'.format(self.name, self.challengeRating, self.terrains, self.creatureType)
+        return '(Name: {}, CR: {}, Terrains: {}, Type: {})'.format(self.name, self.challengeRating, self.terrains, self.creatureType)
 
 #invoke as creature = Creature(json.loads(jsonObject, object_hook = asCreature))
 def asCreature(dictionary):
