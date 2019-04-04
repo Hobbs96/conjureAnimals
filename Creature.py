@@ -5,12 +5,12 @@ class Creature:
         self.name = name
         self.challengeRating = challengeRating
 
-        terrainError = ValueError('All of a creatures terrains must be one of: "Land", "Water", or "Sky",' +
+        terrainError = ValueError('All of a creatures terrains must be one of: "Land", "Water", or "Air",' +
         'and it must have at least one')
         if not terrains:
             raise terrainError
         for terrain in terrains:
-            if terrain != 'Land' and terrain != 'Water' and terrain != 'Sky':
+            if terrain != 'Land' and terrain != 'Water' and terrain != 'Air':
                 raise terrainError
                 
         self.terrains = terrains

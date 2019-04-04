@@ -106,7 +106,7 @@ class ConjureCreaturesGeneratorFrame(wx.Frame):
         if self.waterCheckBox.GetValue():
             terrains.add('Water')
         if self.skyCheckBox.GetValue():
-            terrains.add('Sky')
+            terrains.add('Air')
         conjuredCreatures = self.creatureGenerator(requestedCR, terrains)
         self.creatureList.DeleteAllItems()
         for key, value in conjuredCreatures.items():
@@ -115,7 +115,7 @@ class ConjureCreaturesGeneratorFrame(wx.Frame):
     def generateTerrainCheckBoxes(self):
         self.landCheckBox = wx.CheckBox(self.panel, label = 'Land', pos = (25,110)) 
         self.waterCheckBox = wx.CheckBox(self.panel, label = 'Water', pos = (25,130)) 
-        self.skyCheckBox = wx.CheckBox(self.panel, label = 'Sky', pos = (25, 150)) 
+        self.skyCheckBox = wx.CheckBox(self.panel, label = 'Air', pos = (25, 150)) 
         self.landCheckBox.SetValue(True)
 
 

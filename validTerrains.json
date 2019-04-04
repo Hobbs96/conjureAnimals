@@ -1,6 +1,6 @@
 {
     "ValidTerrains":
     [
-        "Land", "Water", "Sky"
+        "Land", "Water", "Air"
     ]
 }
