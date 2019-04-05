@@ -3,6 +3,8 @@ from FloatStrDict import FloatStrDict
 class FloatStrDefaultDict(FloatStrDict):
     def __init__(self, defaultCallable):
         super().__init__()
+        if not callable(defaultCallable):
+            raise ValueError('defaultCallable must be a "callable" object')
         self._defaultFactory = defaultCallable
 
     def __getitem__(self, key):
