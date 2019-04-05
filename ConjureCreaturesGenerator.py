@@ -1,3 +1,4 @@
+from FloatStrDefaultDict import FloatStrDefaultDict
 from collections import defaultdict
 from random import randint
 import json
@@ -8,8 +9,7 @@ from Creature import *
 
 class ConjureCreaturesGenerator:
     def __init__(self, fileName):
-        #TODO subclass a dictionary so that one can access elements with a string, int, or float key (pg. 80 in Fluent Python)
-        self.creaturesByCR = defaultdict(list)
+        self.creaturesByCR = FloatStrDefaultDict(list)
         self._readInFromFile(fileName)
         self.challengeRating = 0
     
@@ -18,10 +18,7 @@ class ConjureCreaturesGenerator:
 
     def __call__(self, challengeRating, terrains):
         self.validateCallInput(challengeRating, terrains)
-        if challengeRating != 0:
-            self.challengeRating = float(challengeRating)
-        else:
-            self.challengeRating == int(challengeRating)
+        self.challengeRating = float(challengeRating)
         self.terrains = set(terrains)
         return self._generateCreatures()
     
@@ -55,12 +52,12 @@ class ConjureCreaturesGenerator:
         return creatureCounts
 
     def _getCreatureSequence(self):
-        # the number specifics should be moved out into a metadata file
+        #TODO the number specifics should be moved out into a metadata file
         if str(self.challengeRating) not in self.creaturesByCR:
             raise KeyError('This generator object has no creatures of the requested Challenge Rating')
 
         if self.challengeRating <= 0.25:
-            sequence = self.creaturesByCR['0.25'] + self.creaturesByCR['0.125'] + self.creaturesByCR['0']
+            sequence = self.creaturesByCR[0.25] + self.creaturesByCR[0.125] + self.creaturesByCR[0]
         else:
             sequence = self.creaturesByCR[str(self.challengeRating)]
             
