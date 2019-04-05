@@ -24,21 +24,6 @@ class ConjureCreaturesGenerator:
             self.challengeRating == int(challengeRating)
         self.terrains = set(terrains)
         return self._generateCreatures()
-
-    def validateCallInput(self, challengeRating, terrains):
-        errorStringMiddle = 'given to the ConjureCreaturesGenerator call must be'
-        if challengeRating < 0:
-            raise ValueError('Challenge rating ' + errorStringMiddle + ' >= 0')
-        if not terrains:
-            raise ValueError('Terrains collection ' + errorStringMiddle + ' non-empty')
-        #TODO the below code is hard-coded, although the values therein aren't expected to change. Fix necessary?
-        try:
-            validTerrainsFile = open('validTerrains.json')
-            validTerrains = set(json.load(validTerrainsFile)["ValidTerrains"])
-        except:
-            raise ValueError('Failed to load validTerrains.json file')
-        if not validTerrains.intersection(terrains):
-            raise ValueError('All entries in the terrains sequence ' + errorStringMiddle + ' "Air", "Land", or "Water"')
     
     def _readInFromFile(self, filePath):
         fileName, fileExtension = os.path.splitext(filePath)
@@ -80,5 +65,21 @@ class ConjureCreaturesGenerator:
             sequence = self.creaturesByCR[str(self.challengeRating)]
             
         return [creature for creature in sequence if set(creature.terrains).intersection(self.terrains)]
+
+    def validateCallInput(self, challengeRating, terrains):
+        errorStringMiddle = 'given to the ConjureCreaturesGenerator call must be'
+        if challengeRating < 0:
+            raise ValueError('Challenge rating ' + errorStringMiddle + ' >= 0')
+        if not terrains:
+            raise ValueError('Terrains collection ' + errorStringMiddle + ' non-empty')
+        #TODO the below code is hard-coded, although the values therein aren't expected to change. Fix necessary?
+        try:
+            validTerrainsFile = open('validTerrains.json')
+            validTerrains = set(json.load(validTerrainsFile)["ValidTerrains"])
+        except:
+            raise ValueError('Failed to load validTerrains.json file')
+        if not validTerrains.intersection(terrains):
+            raise ValueError('All entries in the terrains sequence ' + errorStringMiddle + ' "Air", "Land", or "Water"')
+
 
             
