@@ -1,4 +1,5 @@
 from ConjureCreaturesGenerator import *
+import pytest
 
 class TestConjureCreaturesGenerator():
     def test_init_simple(self):
@@ -11,30 +12,14 @@ class TestConjureCreaturesGenerator():
 
     def test_badCalls(self):
         generator = ConjureCreaturesGenerator('test_creatures.json')
-        try:
+        with pytest.raises(ValueError):
             generator(-1, ['Land'])
-        except Exception as e1:
-            print(e1)
-            try:
-                generator(40, ['Land', 'Air', 'Water'])
-            except Exception as e2:
-                print(e2)
-                try:
-                    generator(0, [])
-                except Exception as e3:
-                    print(e3)
-                    try:
-                        generator(0, ['Sand'])
-                        #TODO this needs to throw an exception
-                    except Exception as e4:
-                        print(e4)
-                        return
-        assert(False)
+        with pytest.raises(ValueError):
+            generator(0, [])
+        with pytest.raises(ValueError):
+            generator(0, ['Sand'])
     
 
     def test_readFromJSON(self):
-        try:
+        with pytest.raises(ValueError):
             generator = ConjureCreaturesGenerator('test_creatures.txt')
-        except Exception as e:
-            return
-        assert(False)

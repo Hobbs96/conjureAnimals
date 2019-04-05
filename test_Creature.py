@@ -1,4 +1,5 @@
 from Creature import *
+import pytest
 
 class TestCreature():
     def test_initSimple(self):
@@ -14,12 +15,8 @@ class TestCreature():
         assert(demonFish.creatureType == 'Monstrosity')
 
     def test_initBadTerrains(self):
-        exceptionRaised = False
-        try:
+        with pytest.raises(ValueError):
             spaceCreature = Creature('SpaceCreature', '1', terrains=['Space'])
-        except Exception as e:
-            exceptionRaised = True
-        assert(exceptionRaised)
 
     def test_repr(self):
         dog = Creature('Doggo', '1')

@@ -2,7 +2,7 @@ from collections import UserDict
 
 class FloatStrDict(UserDict):
     def __missing__(self, key):
-        if isinstance(key, str):
+        if isinstance(key, str) and '.' in key:
             raise KeyError(key)
         return self[str(float(key))]
     
