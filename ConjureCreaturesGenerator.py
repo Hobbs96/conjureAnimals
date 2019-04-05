@@ -8,6 +8,7 @@ from Creature import *
 
 class ConjureCreaturesGenerator:
     def __init__(self, fileName):
+        #TODO subclass a dictionary so that one can access elements with a string, int, or float key (pg. 80 in Fluent Python)
         self.creaturesByCR = defaultdict(list)
         self._readInFromFile(fileName)
         self.challengeRating = 0
