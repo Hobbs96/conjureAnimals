@@ -18,6 +18,8 @@ class TestConjureCreaturesGenerator():
             generator(0, [])
         with pytest.raises(ValueError):
             generator(0, ['Sand'])
+        with pytest.raises(KeyError):
+            generator(100, ['Land'])
     
 
     def test_readFromJSON(self):
