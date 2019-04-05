@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['conjureCreaturesGUI.py'],
-             pathex=['D:\\DnD\\ProgramsAndScripts\\conjureAnimals'],
+             pathex=['C:\\Users\\Clark\\Documents\\GitHub\\conjureAnimals'],
              binaries=[],
              datas=[],
              hiddenimports=[],
