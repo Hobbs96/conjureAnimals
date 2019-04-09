@@ -11,3 +11,5 @@ In order to dynamically request and load information from the frontend without r
 However, doing AJAX requests by hand in a cross-browser compatible way is a PITA, so you're better off using jQuery and it's AJAX-related functions.
 
 So those would be the elements and step you should follow to make JavaScript talk to Python.
+
+Consider using Umbrella JS instead of jQuery
