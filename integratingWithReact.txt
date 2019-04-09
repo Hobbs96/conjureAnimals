@@ -1,0 +1,13 @@
+First of all, I don't have any experience using Slack, but I think that doesn't really matter. There are several pieces you need to put together for this to work. First, you have your Python script, which you say it works ok - I'm guessing the script works by manually running it from the terminal, so you need a way of exposing it to the internet.
+
+That's what you called cgi.
+
+There are many ways of doing this, but it basically boils down to having a web server with an endpoint that, when accessed, launches your script with the appropriate parameters and returns its output. As you seem familiar with Python, I'd advise you to take a look at Flask, a really easy to use microframework that will allow you to set up a small web application. There are several ways of running your web application, particularly depending on what web server you're using. A quick Google search will show many tutorials about that matter.
+
+Also, it's important that you properly format the messages sent from the backend to your web frontend and viceversa. That's why you've mentioned JSON. It's a great way of passing messages back and forth. You can easily convert Python objects (like dicts) to JSON using built-in and third party libraries.
+
+In order to dynamically request and load information from the frontend without refreshing your website, you'll need some kind of asynchronous procedure. That's what AJAX is about. It's a mechanism of sending and receiving information asynchronously, so your website can keep going while the information is still to be received.
+
+However, doing AJAX requests by hand in a cross-browser compatible way is a PITA, so you're better off using jQuery and it's AJAX-related functions.
+
+So those would be the elements and step you should follow to make JavaScript talk to Python.
