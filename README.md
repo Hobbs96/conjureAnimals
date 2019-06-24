@@ -8,4 +8,4 @@ This is a small GUI application to simplify the use of creature conjuration spel
 The application loads in a creature list in a JSON format, meaning that it is extensible, even with custom creatures.
 
 Due to legal reasons, there cannot be a database to retrieve stat-blocks for the creatures that are generated. That being the case,
-it is still necessary to have D&D material on hand, ex. a monster manual. 
+it is still necessary to have D&D material on hand, e.g. a monster manual. 
