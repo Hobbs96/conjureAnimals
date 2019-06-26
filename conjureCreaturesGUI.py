@@ -31,7 +31,7 @@ class ConjureCreaturesGeneratorFrame(wx.Frame):
         # The "\t..." syntax defines an accelerator key that also triggers
         # the same event
         loadFileItem = fileMenu.Append(-1, "&Load File...\tCtrl-L", 
-                "Choose a .json or .txt file to load as the creature set")
+                "Choose a .json file to load as the creature set")
         fileMenu.AppendSeparator()
         # When using a stock ID we don't need to specify the menu item's
         # label
@@ -86,7 +86,7 @@ class ConjureCreaturesGeneratorFrame(wx.Frame):
 
     def onAbout(self, event):
         wx.MessageBox("This is a wxPython GUI for the Conjure Creatures spell in D&D 5e." +
-                      "\nSee Hobbs96 on github for more.", 
+                      "\nSee clark-lindsay on github for more.", 
                       "About Conjure Creatures",
                       wx.OK|wx.ICON_INFORMATION)
 
